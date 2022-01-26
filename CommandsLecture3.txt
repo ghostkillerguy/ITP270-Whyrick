@@ -1,0 +1,84 @@
+1  
+    2  ll
+    3  ls
+    4  cd ITP270-Whyrick
+    5  ls
+    6  nano Lecture3.txt
+    7  git status
+    8  git add -A
+    9  git status
+   10  git commit -m "adding the lecture3 file with folder structure"
+   11  git push
+   12  cd ..
+   13  pwd
+   14  mkdir Movies
+   15  cd Movies
+   16  mkdir Action
+   17  mkdir Comedy
+   18  mkdir Drama
+   19  ls
+   20  touch Genres.txt
+   21  ls
+   22  cd Action
+   23  mkdir Scifi
+   24  cd Scifi
+   25  touch Terminator.txt
+   26  ls
+   27  cd ..
+   28  ls
+   29  mkdir Superhero
+   30  touch Batman.txt
+   31  touch Matrix-reloaded.txt
+   32  touch Matrix-revolutions.txt
+   33  touch Matrix.txt
+   34  touch Superman.txt
+   35  touch Wonderwoman.txt
+   36  ls
+   37  cd ..
+   38  mkdir Comedy
+   39  ls
+   40  cd Comedy
+   41  mkdir Slapstick
+   42  mkdir Satire
+   43  mkdir The-office.txt
+   44  ls
+   45  cd Slapstick
+   46  touch Waterboy.txt
+   47  touch Zoolander.txt
+   48  ls
+   49  cd ..
+   50  cd Satire
+   51  touch Fightclub.txt
+   52  ls
+   53  cd ..
+   54  ls
+   55  rm -r The-office.txt
+   56  ls
+   57  touch The-office.txt
+   58  ls
+   59  cd ..
+   60  ls
+   61  cd Drama
+   62  ls
+   63  mkdir Biopic
+   64  mkdir Historical
+   65  cd Biopic
+   66  touch Cleopatra.txt
+   67  touch Lincoln.txt
+   68  touch Frida.txt
+   69  touch Notorious.txt
+   70  touch Ray.txt
+   71  ls
+   72  cd ..
+   73  cd Historical
+   74  ls
+   75  touch Gladiator.txt
+   76  touch Selma.txt
+   77  ls
+   78  cd ..
+   79  ls
+   80  git add -A
+   81  cd ..
+   82  git add -A
+   83  ls
+   84  git push
