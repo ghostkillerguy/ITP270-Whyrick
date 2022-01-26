@@ -1,0 +1,56 @@
+    1  
+    2  lsb_release -a
+    3  sudo apt update
+    4  python3 --version
+    5  git --version
+    6  git config --global user.name "Wyrick McCabe"
+    7  git config --global user.email "wlm2359@email.vccs.edu"
+    8  git config --global color.ui auto
+    9  pwd
+   10  ll
+   11  mkdir ITP270
+   12  ls
+   13  cd ITP270/
+   14  ls
+   15  nano ITP270.py
+   16  mkdir ITP270Wyrick
+   17  ls
+   18  nano ITP270Wyrick2.py
+   19  python3 ITP270Wyrick2.py
+   20  git init
+   21  pwd
+   22  ls
+   23  cd ..
+   24  pwd
+   25  git clone https://github.com/ghostkillerguy/ITP270-Whyrick.git
+   26  ls
+   27  cd ITP270
+   28  ls
+   29  man cp
+   30  rm ITP270Wyrick
+   31  rm ITP270.py
+   32  ls
+   33  cat ITP270Wyrick2.py
+   34  ls
+   35  cp ITP270Wyrick2.py ~/ITP270-Whyrick/
+   36  ls
+   37  cd ..
+   38  ls
+   39  cd ITP270-Whyrick
+   40  ls
+   41  cd ..
+   42  ls
+   43  cd ITP270
+   44  ls
+   45  rmdir ITP270Wyrick
+   46  ls
+   47  cd ..
+   48  ls
+   49  cd ITP270-Whyrick
+   50  ls
+   51  git status
+   52  git add -A
+   53  git status
+   54  git commit -m "Adding the file ITP270Wyrick2.py"
+   55  git status
+   56  git push
