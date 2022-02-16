@@ -1,0 +1,76 @@
+Bash Scripting Tutorial
+
+1. The beginning of your script file should start with:
+	#!/bin/bash
+	Explanation : This tells the computer which type of interpreter to use for the script.
+
+2. To provide the script file an execute permission run below command:
+	chmod +x fileName.sh
+
+3. To run the script on terminal:
+	./script.sh
+
+4. To output message on terminal:
+	echo "Message"
+
+5. Variables: To set the variable 'greeting' to "Hello" string:
+	greeting="Hello"
+	**Don't put an extra space between the variable, "=" assignment operator and value
+
+6. To access the value of variable, use the variable name prepended with a dollar sign
+	echo $greeting
+
+7. Conditionals: In bash we use if - then - else - fi for conditional
+   Comparison Operators: 
+	- Equal: -eq
+	- Not equal: -ne
+	- Less than or equal: -le
+	- Less than: -lt
+	- greater than or equal: -ge
+	- Greater than: -gt
+	- Is null: -z
+  **When comparing strings, it is best practice to put variable into quotes("")
+ 
+  A complete conditional in a bash scritp uses the foloowing syntax:
+  
+  # Declare the variable index and initialize it with zero
+  $index=0
+  if [ $index - lt 5 ]
+  then 
+    echo $index
+  else
+    echo 5
+  fi
+
+8. Loops: Three different types of loop - for, while, until
+
+   For loop:
+   
+   for word in $paragraph
+   do
+     echo $word
+   done   
+
+   While loop:
+
+   while [ $index -lt 5 ]
+   do
+     echo $index
+     index=$((index + 1))
+   done
+
+   Until loop:
+
+   until [$index -eq 5 ]
+   do
+    echo $index
+    index=$((index + 1))
+   done
+
+9. Inputs: Keyword "read" then the variable to store the user input
+   To store user input in the variable age the syntax should be like follwoing:
+   read age
+
+10. Adding an alias for customized script execution command and standard output:
+    For example, we are trying to use "greet" to run script.sh and the standard input is going to be 3
+    alias greet="./script.sh 3"
