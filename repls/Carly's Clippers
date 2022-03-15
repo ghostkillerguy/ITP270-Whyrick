@@ -1,1 +1,44 @@
+# listing the Hairstyles
+hairstyles = ["mullet", "buzz", "curly", "bangs", "shagg", "bob", "extensions"]
+# listing Prices for each hairstyle
+prices = [5, 10, 12, 15, 18, 20, 30]
+# listing the number of times a hairstyle was got last week
+last_week = [2, 3, 5, 8, 4, 4, 6]
 
+# Calculating the total money made for each hairstyle
+mulletTotal = 0
+mulletTotal = prices[0] * last_week[0]
+
+# First, let’s sum up all the prices of haircuts. Create a variable total_price, and set it to 0.
+# 2. Loop through the prices list and add each price to the variable
+total_price = 0
+for price in prices:
+    total_price = price + total_price
+
+# 3. After your loop, create a variable called average_price that is the total_price divided by the number of prices.
+average_price = total_price / len(prices)
+
+# 4. Print the value of average_price so the output looks like: Average Haircut Price: <average_price>
+print(f'Average Haircut Price: {average_price:.2f}')
+#5. Use a list comprehension to make a list called new_prices, which has each element in prices minus 5.
+new_prices = [price -5 for price in prices]
+# 6. Print new_prices.
+print(f'New prices is : {new_prices}')
+#7. Create a variable called total_revenue and set it to 0.
+total_revenue = 0
+# 8. Use a for loop to create a variable i that goes from 0 to len(hairstyles) Hint: You can use range() to do this!
+for i in range(len(hairstyles)): 
+#9. Add the product of prices[i]  last_week[i] (the number of people to total_revenue
+    total_revenue = total_revenue + prices[i] * last_week[i]
+# 10. After your loop, print the value of total_revenue, so the output looks like: Total Revenue: <total_revenue>
+print(f'Total Revenue: {total_revenue}')
+# 11. Find the average daily revenue by dividing total_revenue by 7. Call this number average_daily_revenue and print it out.
+average_daily_revenue = total_revenue / 7
+# copy line 26 and fix it up
+print(f' Average Daily Price: {average_price:.2f}')
+
+#12. Carly thinks she can bring in more customers by advertising all of the haircuts she has that are under 30 dollars. Use a list comprehension to create a list called cuts_under_30 that has the entry hairstyles[i] for each i for which new_prices[i] is less than 30. You can use range() in your list comprehension to make i go from 0 to len(new_prices) - 1.
+cuts_under_30 = [hairstyles[i] for i in range(len(new_prices)) if new_prices[i] < 30]
+
+#13. Print cuts_under_30.
+print("Cuts under 30", cuts_under_30)
