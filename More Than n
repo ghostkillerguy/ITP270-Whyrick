@@ -1,0 +1,12 @@
+#Defining a function with 3 parameters
+def more_than_n(lst, item, n):
+#using the function .count to determine if item appears in lst more times than n
+  if lst.count(item) > lst.count(n):
+#returns the value of the final print of function more_than_n as "True"
+    return True
+#else is here in case item appears less than n inside of lst
+  else:
+#returns the value of the final print of function more_than_n as "False"
+    return False
+#prints the function more_than_n along with giving the parameters lst/item/n their values
+print(more_than_n([2, 4, 6, 2, 3, 2, 1, 2], 2, 3))
