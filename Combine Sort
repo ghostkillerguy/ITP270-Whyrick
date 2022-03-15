@@ -1,6 +1,0 @@
-#defining the function combine_sort and giving it 2 parameters
-def combine_sort(lst1, lst2):
-#this using the function sorted() on the 2 parameters and adding them together to then be returned as the result of the function combine_sort
-  return sorted(lst1 + lst2)
-#defining the lists of the 2 parameters and printing the function combine_sort
-print(combine_sort([4, 10, 2, 5], [-10, 2, 5, 10]))
