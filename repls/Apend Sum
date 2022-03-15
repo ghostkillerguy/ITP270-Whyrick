@@ -1,1 +1,11 @@
-
+#defining a function with a parameter of lst
+def append_sum(lst):
+#creating a for loop that loops 3 times
+  for sum in range (1, 4):
+#making the variable sum = to the last number in lst plus the second to last number
+    sum = lst[-1] + lst[-2]
+#appending the variable sum to the end of the lst
+    lst.append(sum)
+  return lst
+#printing lst which is 1, 1, 2 and then the numbers from the loop function 3, 5, 8
+print(append_sum([1, 1, 2]))
