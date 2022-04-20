@@ -1,0 +1,89 @@
+#creating a constructor class called Menu
+class Menu:
+  def __init__(self,name,items,start_time,end_time):
+    self.name = name
+    self.items = items
+    self.start_time = start_time
+    self.end_time = end_time
+  
+  def __repr__(self):
+    #telling when the menu's would be ready to use using military time
+    return "{name} menu available from {start_time} to {end_time} military time.".format(name = self.name,start_time = self.start_time,end_time = self.end_time)
+
+  #making the equation to calculate the bills of items
+  def calculate_bill(self, purchased_items):
+    bill= 0
+    for y in purchased_items:
+      bill += self.items[y]
+    return bill
+#items for the brunch variable Menu w/ military time listed at end
+brunch = Menu("Brunch",{'pancakes': 7.50, 'waffles': 9.00, 'burger': 11.00, 'home fries': 4.50, 'coffee': 1.50, 'espresso': 3.00, 'tea': 1.00, 'mimosa': 10.50, 'orange juice': 3.50
+},11,16)
+#items for the early bird variable Menu w/ military time listed at end
+early_bird = Menu("Early_Bird",{'salumeria plate': 8.00, 'salad and breadsticks (serves 2, no refills)': 14.00, 'pizza with quattro formaggi': 9.00, 'duck ragu': 17.50, 'mushroom ravioli (vegan)': 13.50, 'coffee': 1.50, 'espresso': 3.00,
+},15,18)
+#items for the dinner variable Menu w/ military time listed at end
+dinner = Menu("Dinner",{'crostini with eggplant caponata': 13.00, 'ceaser salad': 16.00, 'pizza with quattro formaggi': 11.00, 'duck ragu': 19.50, 'mushroom ravioli (vegan)': 13.50, 'coffee': 2.00, 'espresso': 3.00,
+},17,23)
+#items for the kids variable Menu w/ military time listed at end
+kids = Menu("kids",{'chicken nuggets': 6.50, 'fusilli with wild mushrooms': 12.00, 'apple juice': 3.00
+},11,21)
+#items for the arepas Menu variable w/ military time listed at end
+arepas_menu = Menu("Take a/' Arepa",
+  {'arepa pabellon': 7.00, 'pernil arepa': 8.50, 'guayanes arepa': 8.00, 'jamon arepa': 7.50
+},10,20)
+
+#creating a constructor class called Franchise
+class Franchise:
+  def __init__(self,address,menus):
+    self.address = address
+    self.menus = menus
+  #being able to return the location of our stores
+  def __repr__(self):
+    return "Our store is located at {location}.".format(location = self.address)
+
+  #calculations for printing what menu would be available for what time
+  def available_menus(self,time):
+    self.time = time
+    menulist = []
+    for menu in self.menus:
+        if time >= menu.start_time and time <= menu.end_time:
+          for keys in menu.items:
+            menulist.append(keys)
+    print (menulist)
+
+#the three different addresses along with the menus that go with them
+flagship_store = Franchise("1232 West End Road",[brunch,early_bird,dinner,kids])
+new_installment = Franchise("12 East Mulberry Street",[brunch,early_bird,dinner,kids])
+arepas_place = Franchise("189 Fitzgerald Avenue",[arepas_menu])
+
+#creating a constructor class called Business
+class Business:
+  def __init__(self,name,franchises):
+    self.name = name
+    self.franchises  = franchises
+
+first = Business("Basta Fazoolin' with my Heart", [flagship_store, new_installment])
+second = Business("Take a' Arepa", arepas_place)
+
+#all the printing of necessary stuff along with some "\n" for spacing and looking good
+print (brunch)
+print (brunch.items)
+print ("\n")
+print (early_bird)
+print (early_bird.items)
+print ("\n")
+print (kids)
+print (kids.items)
+print ("\n")
+print (dinner)
+print (dinner.items)
+print ("\n")
+print(brunch.calculate_bill(['pancakes','home fries','coffee']))
+print(early_bird.calculate_bill(['salumeria plate','mushroom ravioli (vegan)']))
+print ("\n")
+print(flagship_store)
+print ("\n")
+flagship_store.available_menus(12)
+print ("\n")
+flagship_store.available_menus(17)
